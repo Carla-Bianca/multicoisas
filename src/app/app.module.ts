@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProdutosComponent } from './produtos/produtos.component';
+import { MultiCoisasComponent } from './produtos/produtos.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -13,14 +13,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 
-import { ProdutosListaComponent } from './produtos-lista/produtos-lista.component';
+import { MultiCoisasListaComponent } from './produtos-lista/produtos-lista.component';
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProdutosComponent,
-    ProdutosListaComponent,
+    MultiCoisasComponent,
+    MultiCoisasListaComponent,
     HomeComponent
   ],
   imports: [

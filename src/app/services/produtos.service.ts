@@ -7,7 +7,7 @@ import produtosConstante from '../../constants/produtos'
   providedIn: 'root'
 })
 
-export class ProdutosService {
+export class MultiCoisasService {
   private produtos: any = []
 
   constructor() {

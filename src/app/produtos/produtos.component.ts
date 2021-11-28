@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-// importamos o service de Produtos
-import { ProdutosService } from '../services/produtos.service'
+// importamos o service de MultiCoisas
+import { MultiCoisasService } from '../services/produtos.service'
 import produtos from '../../constants/produtos';
 
 @Component({
@@ -9,11 +9,11 @@ import produtos from '../../constants/produtos';
   templateUrl: './produtos.component.html',
   styleUrls: ['./produtos.component.scss']
 })
-export class ProdutosComponent implements OnInit {
+export class MultiCoisasComponent implements OnInit {
   // criamos a variavel de produtos
   produtos : any = []
 
-  constructor(private produtosService: ProdutosService) { }
+  constructor(private produtosService: MultiCoisasService) { }
 
   ngOnInit(): void {
     this.init()

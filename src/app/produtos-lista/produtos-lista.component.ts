@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
 
-// importamos o service de Produtos
-import { ProdutosService } from '../services/produtos.service'
+// importamos o service de MultiCoisas
+import { MultiCoisasService } from '../services/produtos.service'
 
 @Component({
   selector: 'app-produtos-lista',
   templateUrl: './produtos-lista.component.html',
   styleUrls: ['./produtos-lista.component.scss']
 })
-export class ProdutosListaComponent implements OnInit {
+export class MultiCoisasListaComponent implements OnInit {
   // variavel
   categoria = null
   produtos : any = []
 
-  constructor(private route:ActivatedRoute, private router:Router, private produtosService: ProdutosService) {
+  constructor(private route:ActivatedRoute, private router:Router, private produtosService: MultiCoisasService) {
     // fica de olho nos eventos das rotas
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationStart) {

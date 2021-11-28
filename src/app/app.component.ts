@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
-import { ProdutosService } from "./services/produtos.service";
+import { MultiCoisasService } from "./services/produtos.service";
 import categorias from '../constants/categorias'
 
 @Component({
@@ -10,7 +10,7 @@ import categorias from '../constants/categorias'
 })
 export class AppComponent {
   categorias = categorias
-  title = 'Produtos';
+  title = 'MultiCoisas';
   routeActive = '';
 
   constructor(private route:ActivatedRoute, private router:Router) {
