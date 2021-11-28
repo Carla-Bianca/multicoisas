@@ -1,0 +1,28 @@
+.toolbar {
+  position: fixed;
+  z-index: 1000;
+}
+
+.sidenav {
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  margin-top: 65px;
+}
+
+.button-menu {
+  width: 100%;
+  text-align: left;
+}
+
+.content {
+  margin-top: 65px;
+  padding: 10px;
+  height: 100%;
+  background-color: white;
+}
+
+.button-menu {
+  border-radius: 0;
+}
+

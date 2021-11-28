@@ -1,0 +1,16 @@
+.category-card {
+  margin: 5px;
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid lightgray;
+}
+
+.category-card:hover {
+  background-color: #673ab7;
+  color: white;
+}
+
+.category-card div {
+  padding-top: 25px;
+}

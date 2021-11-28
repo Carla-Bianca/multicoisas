@@ -1,0 +1,19 @@
+<mat-grid-list cols="5" rowHeight="340px">
+  <!-- percorre a variavel de produtos -->
+  <mat-grid-tile
+    *ngFor="let produto of produtos">
+    <!-- e de acordo com cada produto percorrido, a gente o mostra -->
+    <mat-card class="product-card">
+      <mat-card-header>
+        <mat-card-title>{{ produto.titulo }}</mat-card-title>
+        <mat-card-subtitle>{{ produto.categoria }}</mat-card-subtitle>
+      </mat-card-header>
+      <div>
+        <img mat-card-image src="{{ produto.imagem }}">
+      </div>
+      <mat-card-content>
+        <p>{{ produto.descricao }}</p>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

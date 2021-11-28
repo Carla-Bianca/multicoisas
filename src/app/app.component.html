@@ -1,0 +1,39 @@
+<mat-toolbar color="primary" class="toolbar">
+  <span>Produtos</span>
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav mode="side" opened class="sidenav">
+    <a mat-flat-button [color]="routeActive === '/' ? 'primary' : 'default'" class="button-menu" [routerLink]="'/'">
+      <mat-icon>home</mat-icon>
+      Home
+    </a>
+    <br>
+    <a mat-flat-button [color]="routeActive === '/produtos' ? 'primary' : 'default'" class="button-menu" [routerLink]="'/produtos'">
+      <mat-icon>label</mat-icon>
+      Todos produtos
+    </a>
+    <br>
+    <div *ngFor="let categoria of categorias">
+      <a mat-flat-button [color]="routeActive === '/produtos/' + categoria.url ? 'primary' : 'default'" class="button-menu" [routerLink]="'/produtos/' + categoria.url">
+        <mat-icon>{{ categoria.icone }}</mat-icon>
+        {{ categoria.nome }}
+      </a>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <div>
+      <a mat-button [routerLink]="'/'">Home</a>
+      <span *ngIf="routeActive.match('produtos')">
+        >
+        <a mat-button [routerLink]="'/produtos'"
+           [disabled]="!routeActive.match('produtos/')">Produtos</a>
+      </span>
+      <span *ngIf="routeActive.match('produtos/')">
+        >
+        <a mat-button disabled>{{ getCategoria() }}</a>
+      </span>
+    </div>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

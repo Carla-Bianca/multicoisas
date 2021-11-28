@@ -1,0 +1,17 @@
+<!-- https://material.angular.io/components/grid-list/overview -->
+<mat-grid-list cols="4" rowHeight="150px">
+  <!-- percorremos o array na variavel de categorias -->
+  <a *ngFor="let categoria of categorias" [routerLink]="'/produtos/' + categoria.url">
+    <!-- listamos cada categoria -->
+    <mat-grid-tile>
+      <mat-card class="category-card">
+        <div>
+          <mat-card-title>
+            <mat-icon class="icon">{{ categoria.icone }}</mat-icon>
+          </mat-card-title>
+          <mat-card-title>{{ categoria.nome }}</mat-card-title>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+  </a>
+</mat-grid-list>
